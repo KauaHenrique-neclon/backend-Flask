@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+    <head>
+        <link rel="stylesheet" href="Auth_Static/css/login.css">
+    </head>
+    <body>
+        <div class="conteiner">
+            <form action="/login" method="POST">
+            <div class="login">
+                <h1>Login de publicador</h1>
+               <div class="login-text">
+                    <h1>Digite seu usuario</h1>
+                    <input type="text" name="usuario" id="usuario">
+               </div>
+               <div class="login-senha">
+                    <h1>Digite sua senha</h1>
+                    <input type="password" name="senha" id="senha">
+               </div>
+               <div class="login-submit">
+                   <button type="submit">Entrar</button>
+               </div>
+            </div>
+            </form>
+            <div class="dicas">
+                <p>Para publicar noticias precisa ter um acesso disponibilizado pelos 
+                    moderadores do site e um passe emitido pelos dono do site, caso não
+                    tenha, entrar em contato caso seja um jornalista.
+                </p>
+                <a href="{{url_for('auth.index')}}"><button>Home</button></a>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,247 @@
+body{
+    width: 99%;
+}
+.tudo{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 18% 82%;
+}
+.menu-lateral{
+    background-color: #474a51;
+    min-height: 600px;
+}
+.menu-lateral h2{
+    margin-left: 8%;
+    color: white;
+    font-size: 29px;
+}
+.ul-menu{
+    width: 80%;
+    margin-left: 5%;
+}
+.ul-menu li{
+    list-style-type: none;
+}
+.button-menu{
+    width: 100%;
+}
+.button-menu button{
+    width: 100%;
+    height: 40px;
+    margin-top: 3%;
+    font-size: 15px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    text-align: left;
+}
+.button-menu button:hover{
+    background-color: #979797;
+    font-size: 12px;
+}
+.content{
+    width: 80%;
+    background-color: transparent;
+    margin-left: 18%;
+    display: none;
+}
+.inicio-dash{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+.inicio-dash h1{
+    margin-left: 8%;
+    color: black;
+    font-size: 26px;
+    width: 70%;
+}
+.inicio-dash button{
+    width: 100px;
+    height: 35px;
+    margin-top: 14%;
+    text-transform: uppercase;
+    color: white;
+    background-color: #3873fc;
+    border: none;
+    border-radius: 5px;
+}
+.estatistica{
+    width: 100%;
+}
+.estatistica h2{
+    width: 90%;
+    margin-left: 8%;
+    font-size: 24px;
+}
+.row{
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+@media (min-width: 768px) {
+    .coluna-estatistica-1 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+.coluna-estatistica-1{
+    max-width: 245px;
+    min-width: 240px;
+    background-color: #28a745;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    margin: 3%;
+}
+.coluna-estatistica-2{
+    max-width: 245px;
+    background-color: #1ec6e0;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    min-width: 240px;
+    margin: 3%;
+}
+.coluna-estatistica-3{
+    max-width: 245px;
+    min-width: 240px;
+    background-color: #ffc107;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    margin: 3%;
+}
+.card-estatistica{
+    width: 100%;
+    color: white;
+}
+.card-header{
+    width: 89%;
+    font-size: 19px;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+.card-body{
+    width: 100%;
+}
+.card-text{
+    word-wrap: break-word; /* Para quebra de linha */
+    box-sizing: border-box; 
+}
+.card-body h5{
+    font-size: 22px;
+    margin-bottom: 3%;
+    margin-left: 10%;
+}
+.card-body p{
+   width: 80%;
+   margin-left: 10%;
+   font-size: 18px;
+}
+
+.atividades {
+    margin-top: 20px;
+}
+
+.atividades h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    margin-top: 10px;
+}
+
+.table th, .table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.table th {
+    background-color: transparent;
+    color: #333;
+    font-weight: bold; 
+}
+
+.table tr:nth-child(even) {
+    background-color: transparent;
+}
+
+.table tr:hover {
+    background-color: transparent;
+}
+
+.table td {
+    color: #555;
+}
+
+.lista-usuario{
+    width: 80%;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+.tabela-usuario{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.confi-tabela th,.confi-tabela td{
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+.tabela-usuario th {
+    background-color: #f2f2f2;
+}
+
+.tabela-usuario tr:nth-child(even) {
+    background-color: #f9f9f9; /* Fundo alternado para as linhas */
+}
+
+.tabela-usuario tr:hover {
+    background-color: #f1f1f1; /* Fundo ao passar o mouse */
+}
+
+.tabela-usuario button {
+    background-color: #ff4d4d;
+    width: 80%;
+    margin-left: 10%;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.tabela-usuario button:hover {
+    background-color: #ff1a1a; /* Cor ao passar o mouse */
+}
+.resumo{
+    width: 80%;
+    margin-top: 5%;
+    margin-left: 10%;
+    display: none;
+}
+.resumo h1{
+    font-size: 25px;
+    margin-left: 10%;
+}
+.resumo-esta{
+    width: 80%;
+    margin-left: 20%;
+}
+.resumo-esta p{
+    font-size: 20px;
+    margin-top: 5%;
+}

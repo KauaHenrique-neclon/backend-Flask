@@ -1,0 +1,20 @@
+create table dados(
+	id SERIAL PRIMARY KEY,
+	usuario varchar(30) not null,
+	senha varchar(20)
+);
+create table noticias(
+	id SERIAL PRIMARY KEY,
+	titulo varchar(20) not null,
+	nome varchar(20) not null,
+	data_publicacao date not null,
+	imagem  varchar(255) null,
+	descricao varchar(256) null,
+	id_user integer not null,
+	CONSTRAINT pk_id_user FOREIGN KEY (id_user) REFERENCES dados(id)
+);
+create table adm(
+	id_adm SERIAL PRIMARY KEY,
+	email varchar(120) not null,
+	senha varchar(30) not null
+);

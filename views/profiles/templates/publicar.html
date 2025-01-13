@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+    <head>
+        <link rel="stylesheet" href="Profile_Static/css/publicar.css">
+    </head>
+    <body>
+        <div class="cabeçario">
+            <span class="button-cabeçario">
+                <a href=""><button>Home</button></a>
+                <a href="{{url_for('user.deletar')}}"><button>Deletar</button></a>
+                <a href=""><button>eletar</button></a>
+            </span>
+        </div>
+        <div class="conteiner">
+            <form action="/publicar" id="publicar" method="POST" enctype="multipart/form-data">
+            <div class="publicar">
+                <div class="titulo-h1">
+                    <h1>Publicar Noticia</h1>
+                </div>
+                <div class="titulo-publicar">
+                    <h1>Titulo</h1>
+                    <input type="text" id="titulo" name="titulo" required>
+                </div>
+                <div class="imagem-publicar">
+                    <h1>Imagem(Se tiver)</h1>
+                    <input type="file" id="imagem" name="imagem">
+                </div>
+                <div class="texto-publicar">
+                    <h1>Descrição</h1>
+                    <textarea name="descricao" id="descricao" required></textarea>
+                </div>
+                <div class="button-publicar">
+                    <button type="submit" value="Enviar">Publicar</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </body>
+</html>

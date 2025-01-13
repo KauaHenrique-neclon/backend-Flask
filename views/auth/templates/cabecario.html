@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+    <head>
+        <link rel="stylesheet" href="Auth_Static/css/cabecario.css">
+    </head>
+    <body>
+        <div class="cabeçario">
+            <span class="button-cabeçario">
+                <a href=""><button>Home</button></a>
+                <a href=""><button>Blog</button></a>
+                {% if usuario.is_authenticated %}
+                <a href=""><button>Sair</button></a>
+                {% else %}
+                <a href="{{url_for('auth.login')}}"><button>Login</button></a>
+                {% endif %}
+                {% if usuario.is_active %}
+                <a href="{{url_for('user.publicar')}}"><button>Publicar</button></a>
+                {% endif %}
+                <button>click</button>
+                <h1 class="h1-cabe"></h1>
+            </span>
+        </div>

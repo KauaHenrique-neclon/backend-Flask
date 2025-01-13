@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+    <head>
+        <link rel="stylesheet" href="Auth_Static/css/index.css">
+    </head>
+    <body>
+        {% include 'cabecario.html' %}
+        <div class="conteiner">
+            <div class="noticia-princial">
+                <div>
+                    <h1>Titulo da noticia</h1>
+                </div>
+                <div>
+                    <img src="" alt="">
+                </div>
+                <div>
+                    <p>deadpool usa espada para atacar seus inimigos quando
+                    acaba as balas de sua arma, ele usa uma pistola e ele 
+                    se regenera, mas enquato seu corpo tem cancer, ele 
+                    é um cancer ambulante</p>
+                </div>
+            </div>
+            <div class="noticia-pequena">
+                <div class="noticia-box">
+                    <div>
+                        <h1>Titulo da noticia</h1>
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <div class="noticia-box">
+                    <div>
+                        <h1>Titulo da noticia</h1>
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <div class="noticia-box">
+                    <div>
+                        <h1>Titulo da noticia</h1>
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% if dados %}
+        <div class="noticia-floot">
+            <div class="conteiner-noticia-pequena">
+                {% for dados in dados %}
+                <div class="box-da-noticia">
+                    <div>
+                        <h1>{{ dados.titulo }}</h1>
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </body>
+</html>

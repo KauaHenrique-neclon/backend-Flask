@@ -1,0 +1,87 @@
+body{
+    width: 99%;
+    height: 100%;
+    background-color: #474a51;
+}
+.conteiner{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+.login{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 15%;
+}
+.login h1{
+    color: white;
+}
+.login-text{
+    width: 100%;
+}
+.login-text h1{
+    width: 80%;
+    margin-left: 10%;
+    font-size: 21px;
+}
+.login-text input{
+    width: 80%;
+    height: 25px;
+    margin-left: 10%;
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+}
+.login-senha{
+    width: 100%;
+    margin-top: 5%;
+}
+.login-senha h1{
+    width: 80%;
+    margin-left: 10%;
+    font-size: 21px;
+}
+.login-senha input{
+    width: 80%;
+    height: 25px;
+    margin-left: 10%;
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+}
+.login-submit{
+    width: 100%;
+    margin-top: 5%;
+}
+.login-submit button{
+    width: 80%;
+    height: 25px;
+    margin-left: 10%;
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.login-submit button:hover{
+    background-color: #d3d3d3;
+}
+.dicas {
+    width: 80%;
+    margin-left: 10%;
+}
+.dicas p{
+    width: 100%;
+    font-size: 20px;
+    margin-top: 14%;
+    color: white;
+}
+.dicas button{
+    width: 80%;
+    height: 25px;
+    margin-top: 65%;
+    margin-left: 10%;
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.dicas button:hover{
+    background-color: #d3d3d3;
+}

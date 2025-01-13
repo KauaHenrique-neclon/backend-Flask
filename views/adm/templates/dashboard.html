@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="AdmStatic/css/dashboard.css">
+    <script src="AdmStatic/js/dashboard.js" defer></script>
+</head>
+<body>
+    <div class="tudo">
+        <div class="menu-lateral">
+            <h2>Meu Dashboard</h2>
+            <div class="ul-menu">
+                <li class="button-menu">
+                    <button id="buttonContent">Inicio</button>
+                </li>
+                <li class="button-menu">
+                    <button id="buttonUsuario">Usuario</button>
+                </li>
+                <li class="button-menu">
+                    <button id="relatorio">Relatórios</button>
+                </li>
+                <li class="button-menu">
+                    <a href=""><button>Configuração</button></a>
+                </li>
+                <li class="button-menu">
+                    <a href=""><button>Sair</button></a>
+                </li>
+            </div>
+        </div>
+
+        <!-- Conteúdo Principal -->
+        <div class="content" id="content" style="display: block;">
+            <header class="inicio-dash">
+                <h1>Bem-vindo ao Dashboard</h1>
+                <div>
+                    <button>Adicionar</button>
+                </div>
+            </header>
+
+            <hr>
+
+            <section class="estatistica">
+                <h2>Estatísticas</h2>
+                <div class="row">
+                    <div class="coluna-estatistica-1">
+                        <div class="card-estatistica">
+                            <div class="card-header">Usuários Ativos</div>
+                            <hr>
+                            <div class="card-body">
+                                <h5 class="card-title">{{ TotalUsuario }}</h5>
+                                <p class="card-text">Número total de publicador no jornal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coluna-estatistica-2">
+                        <div class="card-estatistica">
+                            <div class="card-header">Novos Usuários</div>
+                            <hr>
+                            <div class="card-body">
+                                <h5 class="card-title">{{ totalAtivo }}</h5>
+                                <p class="card-text">Ativos no momento</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coluna-estatistica-3">
+                        <div class="card-estatistica">
+                            <div class="card-header">Relatórios Pendentes</div>
+                            <hr>
+                            <div class="card-body">
+                                <h5 class="card-title">j</h5>
+                                <p class="card-text">Número de relatórios que precisam de atenção.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="atividades">
+                <h2>Últimas Atividades</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Atividade</th>
+                            <th>Usuário</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>data</td>
+                            <td>oq houve</td>
+                            <td>nome</td>
+                        </tr>
+                        <tr>
+                            <td>data</td>
+                            <td>oq houve</td>
+                            <td>nome</td>
+                        </tr>
+                        <tr>
+                            <td>data</td>
+                            <td>Uq houve</td>
+                            <td>nome</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <div class="lista-usuario" id="lista-usuario">
+            <h1>Lista de Usuários</h1>
+            <table class="tabela-usuario">
+                <thead class="confi-tabela">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody class="confi-tabela">
+                    {% if dados_usuario %}
+                    {% for du in dados_usuario %}
+                    <tr>
+                        <td>{{ du.id }}</td>
+                        <td>{{ du.nome }}</td>
+                        <td>{{ du.email }}</td>
+                        <td>
+                            <form action="/dashboardAdm" method="POST">
+                                <button type="submit" name="id_usuario" value="{{ du.id }}" onclick="return confirm('Tem certeza que deseja excluir este usuário?');">Excluir</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    {% else %}
+                    <tr>
+                        <td colspan="4">Nenhum Usuário</td>
+                    </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+        <div class="resumo" id="resumoRelatorio">
+            <h1>Dashboard</h1>
+            <hr>
+            <div class="resumo-esta">
+                <h2>Estatísticas dos Usuários</h2>
+                <p>Total de Usuários: {{ TotalUsuario }}</p>
+                <p>Usuários Ativos: {{ totalAtivo }}</p>
+                <p>Usuários Inativos: {{ usuarios_inativos }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

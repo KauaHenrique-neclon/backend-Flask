@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link rel="stylesheet" href="Profile_Static/css/deletar.css">
+    </head>
+    <body>
+        <div class="cabecario">
+            <div class="button-cabecario">
+                <a href="{{url_for('auth.index')}}"><button>Home</button></a>
+                <a href="{{url_for('user.publicar')}}"><button>Publicar</button></a>
+            </div>
+        </div>
+            <div class="perfil">
+            {% if noticia %}
+                {% for noticia in noticia %}
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                    <div class="alerta" role="alert">
+                        {% for category,message in messages %}
+                        <div class="alert-{{ category }}">{{ message }}</div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                {% endwith %}
+                <div class="publicacoes">
+                    <div class="publi-titulo">
+                        <h1>{{ noticia.titulo }}</h1>
+                    </div>
+                    <div class="publi-imagem">
+                        <img src="{{ noticia.imagem }}" alt="">
+                    </div>
+                    <div class="descricao">
+                        <p>{{ noticia.descricao }}</p>
+                        <form action="/deletar" method="POST" enctype="multipart/form-data">
+                        <button type="submit" name="id_post" value="{{ noticia.id }}" >Deletar</button>
+                        </form>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+            <div class="perfil">
+                <h1>Não tem nenhum post</h1>
+            </div>
+            {% endif %}
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+
+.cabeçario{
+    width: 100%;
+    height: 75px;
+    background-color: #474a51;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 100%;
+}
+.button-cabeçario{
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+.button-cabeçario button{
+    width: 15%;
+    height: 30px;
+    margin-top: 15px;
+    border-radius: 10px;
+    margin: 2%;
+    background-color: transparent;
+    border: none;
+    font-size: 17px;
+    color: white;
+    cursor: pointer;
+}
+.button-cabeçario button:hover{
+    color: rgb(35, 125, 215);
+}
+.cabeçario h1{
+    width: 80%;
+    height: 30px;
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+}
+.h1-cabe h1{
+    color: white;
+    margin-top: 10px;
+}
